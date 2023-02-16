@@ -12,6 +12,6 @@ export class HelloResolver {
 export class FilesResolver {
   @Query(() => [String])
   files() {
-    return fs.readdirSync(".");
+    return fs.readdirSync("src/config");
   }
 }
