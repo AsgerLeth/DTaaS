@@ -10,8 +10,8 @@ export class HelloResolver {
 }
 @Resolver()
 export class FilesResolver {
-  @Query(() => String)
+  @Query(() => [String])
   files() {
-    return fs.readdirSync('.').join(' ');
+    return fs.readdirSync(".");
   }
 }
